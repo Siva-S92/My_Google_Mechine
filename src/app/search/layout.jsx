@@ -1,13 +1,17 @@
-import SearchHeader from '@/components/SearchHeader'
-import React from 'react'
+import SearchHeader from "@/components/SearchHeader";
+import React, { Suspense } from "react";
 
-function WebImglayout({children}) {
+function WebImglayout({ children }) {
   return (
-    <div>
-      <SearchHeader />
-      {children}
-    </div>
-  )
+    <>
+      <Suspense>
+        <div>
+          <SearchHeader />
+          {children}
+        </div>
+      </Suspense>
+    </>
+  );
 }
 
-export default WebImglayout
+export default WebImglayout;
